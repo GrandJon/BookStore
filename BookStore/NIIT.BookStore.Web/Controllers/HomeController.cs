@@ -10,8 +10,11 @@ namespace NIIT.BookStore.Web.Controllers
     {
         public ActionResult Index()
         {
-            string s = "Helloword";
-            return View();
+            object s = "Helloword";
+            //ViewBag.Hello = s;  //动态类型
+            //ViewData["Hello"] = s;
+           
+            return View(s);
         }
 
         public ActionResult About()

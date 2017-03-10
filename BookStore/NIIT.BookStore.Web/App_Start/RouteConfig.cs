@@ -9,7 +9,7 @@ namespace NIIT.BookStore.Web
 {
     public class RouteConfig
     {
-        public static void RegisterRoutes(RouteCollection routes)
+        public static void RegisterRoutes(RouteCollection routes) //路由规则，想让他怎么路由就怎么设置规则
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
