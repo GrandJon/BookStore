@@ -10,6 +10,7 @@ namespace NIIT.BookStore.Web.Controllers
     {
         public ActionResult Index()
         {
+            string s = "Helloword";
             return View();
         }
 
