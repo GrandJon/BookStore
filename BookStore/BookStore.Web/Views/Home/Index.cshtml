@@ -1,0 +1,35 @@
+﻿@model List<BookStore.Web.Models.Book>
+
+@{
+    ViewBag.Title = "首页";
+}
+
+<div class="row">
+    @using (Html.BeginForm("SearchBook", "Book", FormMethod.Get))
+    {
+        @Html.AntiForgeryToken()
+        <div style="top:75px;padding-top:20px;">
+            <div style="padding-left:320px;">
+                <input  name="bookName" v-on="blur:captchaCheck" class="form-control flat" placeholder="书籍的名称" style="width:300px;display:inline;">
+                <button v-on="click:onSubmit" class="get-captcha_button" style="display:inline;font-size:18px;">查找</button>
+            </div>
+        </div>
+
+    }
+    
+</div>
+
+<div class="row" style="padding-top:30px">
+    <h3>热门推荐</h3>
+    @foreach (var item in Model)
+    {
+        <a href="~/Book/Details/@item.BookId">
+            <div class="col-md-3 col-sm-4">
+                <p>
+                    <img src="@item.AlbumArtUrl" />
+                </p>
+                <p>@item.Title</p>
+            </div>
+            </a>
+            }
+</div>

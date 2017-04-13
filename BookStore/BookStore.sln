@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NIIT.BookStore.Web", "NIIT.BookStore.Web\NIIT.BookStore.Web.csproj", "{EAFAB0FC-259F-489E-ADA5-F58470030CAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Web", "BookStore.Web\BookStore.Web.csproj", "{7A7F6255-4F96-4340-9E79-3B6032FEB625}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EAFAB0FC-259F-489E-ADA5-F58470030CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAFAB0FC-259F-489E-ADA5-F58470030CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAFAB0FC-259F-489E-ADA5-F58470030CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAFAB0FC-259F-489E-ADA5-F58470030CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A7F6255-4F96-4340-9E79-3B6032FEB625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7F6255-4F96-4340-9E79-3B6032FEB625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7F6255-4F96-4340-9E79-3B6032FEB625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7F6255-4F96-4340-9E79-3B6032FEB625}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,79 @@
+﻿
+@using X.PagedList.Mvc
+@using X.PagedList
+@using BookStore.Web.Models
+@model IEnumerable<Book>
+
+
+<h2>书籍列表</h2>
+
+<p>
+    @Html.ActionLink("添加新书", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AlbumArtUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@item.AlbumArtUrl"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @*@Html.ActionLink("编辑", "Edit", new { id=item.BookId }) |*@
+            @Html.ActionLink("删除", "Delete", new { id=item.BookId }, new { @class = "del" })
+        </td>
+    </tr>
+}
+
+</table>
+@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index",
+new { page = p }))
+
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            $(".del").click(function () {                
+                var isDel = confirm("是否要删除？");
+                return isDel;
+                
+            });
+        });
+    </script>
+}
